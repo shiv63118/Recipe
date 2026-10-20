@@ -1,0 +1,20 @@
+body{
+    background-color: rgb(29, 1, 66);
+    color: azure;
+}
+
+/* div{
+
+    background-color: rgb(3, 0, 32);
+    text-align: center;
+    border: 2px solid black;
+    margin: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    text-decoration: none;
+} */
+
+div image {
+    margin: 20px;
+    border-radius: 25px;
+}
