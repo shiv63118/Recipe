@@ -1,20 +1,467 @@
-body{
-    background-color: rgb(29, 1, 66);
-    color: azure;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* div{
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 25px;
+}
 
-    background-color: rgb(3, 0, 32);
-    text-align: center;
-    border: 2px solid black;
-    margin: 20px;
-    border-radius: 20px;
-    padding: 10px;
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #030024;
+    color: #000000;
+    line-height: 1.7;
+}
+
+a {
     text-decoration: none;
-} */
+}
 
-div image {
-    margin: 20px;
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+
+/* ---------- Header ---------- */
+
+.hero {
+    min-height: 440px;
+    color: white;
+    background: linear-gradient(135deg, #0d1229, #2d0b44 65%, #070422);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    padding: 22px 8%;
+    background: rgb(21, 14, 41);
+}
+
+.logo {
+    color: rgb(243, 8, 172);
+    font-size: 25px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: rgb(4, 27, 235);
+    font-size: 15px;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: #f5a801;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: auto;
+    padding: 30px 25px 30px;
+    text-align: center;
+}
+
+.tag {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: #f75206;
+    background: #06f812;
+    padding: 5px 14px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.hero-content .tag {
+    color: rgb(251, 251, 253);
+    background: rgba(51, 63, 240, 0.18);
+}
+
+.hero-content h1 {
+    font-size: clamp(34px, 5vw, 54px);
+    line-height: 1.2;
+    margin-bottom: 18px;
+    color: #f86706;
+}
+
+.hero-content h1 span {
+    color: #fab402;
+}
+
+.hero-content p {
+    max-width: 540px;
+    margin: 0 auto 28px;
+    font-size: 17px;
+    color: #fff4ed;
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 30px;
+    background: rgb(3, 3, 46);
+    color: #e6d705;
+    font-weight: 750;
+    transition: 0.25s;
+}
+
+.hero-btn:hover {
+    background: #99039e;
+    transform: translateY(-3px);
+}
+
+
+/* ---------- Recipe Section ---------- */
+
+.recipes-section {
+    max-width: 1250px;
+    margin: auto;
+    padding: 70px 25px;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-heading h2 {
+    font-size: clamp(28px, 4vw, 36px);
+    color: #68fa14;
+    margin-bottom: 8px;
+}
+
+.section-heading p {
+    color: #fcfdfb;
+    font-size: 16px;
+}
+
+
+/* ---------- Recipe Cards ---------- */
+
+.recipe-card {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 35px;
+    align-items: center;
+    margin-bottom: 35px;
+    padding: 25px;
+    background: rgb(78, 24, 139);
+    border: 1px solid #3f0850;
+    border-radius: 30px;
+    box-shadow: 0 8px 28px rgba(70, 48, 25, 0.06);
+    scroll-margin-top: 20px;
+    transition: box-shadow 0.25s, transform 0.25s;
+}
+
+.recipe-card:hover {
+    box-shadow: 0 15px 38px rgba(70, 48, 25, 0.12);
+    transform: translateY(-3px);
+}
+
+.recipe-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    background: #04ec10;
+}
+
+.recipe-image img {
+    display: block;
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    transition: transform 0.4s;
+}
+
+.recipe-card:hover .recipe-image img {
+    transform: scale(1.02);
+}
+
+.category {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 6px 13px;
     border-radius: 25px;
+    background: #fff;
+    color: #e34f32;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.recipe-content h2 {
+    color: #fdae03;
+    font-size: 27px;
+    line-height: 1.3;
+    margin-bottom: 8px;
+}
+
+.description {
+    color: #fcfdfd;
+    margin-bottom: 22px;
+}
+
+.ingredients {
+    background: #1e0041;
+    padding: 16px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    border-left: 4px solid #54fa07;
+}
+
+.ingredients h3,
+.procedure-title {
+    color: #0af816;
+    font-size: 16px;
+    margin-bottom: 7px;
+}
+
+.ingredients p {
+    color: #fcfdfb;
+    font-size: 14px;
+}
+
+.ingredients .note {
+    margin-top: 8px;
+    color: #ec06ce;
+    font-weight: 600;
+}
+
+.recipe-content ol {
+    padding-left: 23px;
+    margin-bottom: 23px;
+}
+
+.recipe-content li {
+    padding-left: 5px;
+    margin-bottom: 7px;
+    color: #12fdfd;
+    font-size: 14px;
+}
+
+.recipe-content li::marker {
+    color: #fdcf02;
+    font-weight: 800;
+}
+
+.recipe-btn {
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 15px;
+    color: rgb(253, 73, 18);
+    background: #0b0133;
+    font-size: 14px;
+    font-weight: 700;
+    transition: background 0.2s;
+}
+
+.recipe-btn:hover {
+    background: #54fa22;
+}
+
+
+/* ---------- Feedback Section ---------- */
+
+.feedback-section {
+    padding: 70px 20px;
+    background: linear-gradient(135deg, #271131, #022353);
+}
+
+.feedback-card {
+    max-width: 900px;
+    margin: auto;
+    padding: 35px;
+    border-radius: 22px;
+    background: rgb(49, 1, 77);
+    box-shadow: 0 10px 35px rgba(50, 65, 35, 0.08);
+}
+
+.feedback-card .section-heading {
+    margin-bottom: 30px;
+}
+
+.feedback-card form > label {
+    display: block;
+    margin: 18px 0 7px;
+    color: #fcad02;
+    font-weight: 700;
+}
+
+.feedback-card input[type="text"],
+.feedback-card textarea {
+    display: block;
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #180125;
+    border-radius: 10px;
+    background: #2c015e;
+    outline: none;
+    color: #fcfbfb;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+
+.feedback-card textarea {
+    resize: vertical;
+}
+
+.feedback-card fieldset {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 22px;
+    padding: 17px;
+    border: 1px solid #1b0120;
+    border-radius: 12px;
+}
+
+.feedback-card legend {
+    padding: 0 8px;
+    color: #04fc11;
+    font-weight: 750;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    background: #f3a702;
+    color: #3a036e;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.checkbox-label input {
+    accent-color: #27f703;
+    cursor: pointer;
+}
+
+.submit-btn {
+    width: 100%;
+    margin-top: 22px;
+    padding: 13px;
+    border: none;
+    border-radius: 10px;
+    color: rgb(11, 1, 49);
+    background: linear-gradient(90deg, #f79504, #c3ee03);
+    font-weight: 750;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 18px rgba(232, 91, 56, 0.25);
+}
+
+
+/* ---------- Footer ---------- */
+
+.footer {
+    padding: 35px 20px;
+    text-align: center;
+    background: #263b2c;
+    color: white;
+}
+
+.footer h2 {
+    margin-bottom: 5px;
+    font-size: 25px;
+    color: #fa5305;
+}
+
+.footer p {
+    color: #d4e0d3;
+    font-size: 14px;
+}
+
+.footer .copyright {
+    margin-top: 20px;
+    padding-top: 18px;
+    border-top: 1px solid #465849;
+    font-size: 12px;
+}
+
+
+/* ---------- Responsive Design ---------- */
+
+@media (max-width: 850px) {
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 12px 20px;
+    }
+
+    .recipe-card {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .recipe-image img {
+        height: 300px;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .hero-content {
+        padding: 50px 20px 65px;
+    }
+
+    .hero-content p {
+        font-size: 15px;
+    }
+
+    .recipes-section {
+        padding: 45px 15px;
+    }
+
+    .recipe-card {
+        padding: 15px;
+        border-radius: 16px;
+    }
+
+    .recipe-image img {
+        height: 230px;
+    }
+
+    .recipe-content h2 {
+        font-size: 23px;
+    }
+
+    .feedback-card {
+        padding: 22px 16px;
+    }
+
+    .feedback-card fieldset {
+        gap: 8px;
+    }
+
+    .checkbox-label {
+        width: 100%;
+    }
+
 }

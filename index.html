@@ -1,165 +1,361 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Recipe Collection</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Delicious Recipe Collection</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<style>
-    *{margin: 0%;}
-</style>
+
+    <header class="hero">
+        <nav class="navbar">
+            <a href="#" class="logo"> RecipeBook</a>
+
+            <ul class="nav-links">
+                <li><a href="#pasta">Pasta</a></li>
+                <li><a href="#pancakes">Breakfast</a></li>
+                <li><a href="#salad">Healthy</a></li>
+                <li><a href="#biryani">VegBiryani</a></li>
+                <li><a href="#feedback">Feedback</a></li>
+            </ul>
+        </nav>
+
+        <div class="hero-content">
+            <span class="tag">FRESH • TASTY • HOMEMADE</span>
+
+            <h1>Delicious Recipes,<br>
+                <span>Made with Love</span>
+            </h1>
+
+            <p>
+                Discover simple, delicious recipes that make
+                every meal a little more special.
+            </p>
+
+            <a href="#recipes" class="hero-btn">Explore Recipes ↓</a>
+        </div>
+    </header>
 
 
-<div >
-        <h1>Delicious Recipe Collection</h1>
-    <ul>
-        <li><a href="#pasta">Creamy Pasta</a></li>
-        <li><a href="#pancakes">Fluffy Pancakes</a></li>
-        <li><a href="#salad">Fresh Garden Salad</a></li>
-        <li><a href="#biryani">Vegetable Biryani</a></li>
-        <li><a href="#sandwich">Grilled Sandwich</a></li>
-    </ul>
-</div>
+    <!-- Recipe Section -->
+    <main>
 
-<div>
-        <h2 id="pasta">Creamy Pasta</h2>
-    <img style="border-radius: 25px; border: 2px solid white ;display: block; text-align: center;;" src="image\Annotation 2026-02-18 121134.png" alt="Creamy Pasta" width="300" />
+        <section id="recipes" class="recipes-section">
 
-    <p>
-        <strong>Ingredients:</strong> Pasta, cream, garlic, butter, cheese, salt, pepper.<br />
-        <strong>Description:</strong> A rich and creamy pasta perfect for dinner.
-    </p>
-
-    <p><strong>Procedure:</strong></p>
-    <ol>
-        <li>Boil pasta in salted water until tender.</li>
-        <li>Heat butter and sauté garlic.</li>
-        <li>Add cream and cheese, stir well.</li>
-        <li>Mix in pasta and cook for 2 minutes.</li>
-        <li>Serve hot.</li>
-    </ol>
-
-</div>
-
-<div>
-        <h2 id="pancakes">Fluffy Pancakes</h2>
-    <img style="border-radius: 25px; border: 2px solid white ;text-align: center;" src="image\Annotation 2026-02-18 122337.png" alt="Pancakes" width="300" />
-
-    <p>
-        <strong>Ingredients:</strong> Flour, milk, eggs, sugar, baking powder, butter.<br />
-        <em>Perfect for breakfast!</em>
-    </p>
-
-    <p><strong>Procedure:</strong></p>
-    <ol>
-        <li>Mix dry ingredients in a bowl.</li>
-        <li>Add milk and eggs, whisk smoothly.</li>
-        <li>Heat pan and add butter.</li>
-        <li>Pour batter and cook both sides.</li>
-        <li>Serve with syrup.</li>
-    </ol>
-</div>
+            <div class="section-heading">
+                <span class="tag">OUR COLLECTION</span>
+                <h2>Explore Our Recipes</h2>
+                <p>Five delicious ideas for your next meal.</p>
+            </div>
 
 
-<div>
-    <h2 id="salad">Fresh Garden Salad</h2>
-    <img style="border-radius: 25px; border: 2px solid white ;text-align: center;" src="image\Annotation 2026-02-18 122737.png" alt="Salad" width="300" />
+            <!-- Pasta -->
+            <article class="recipe-card" id="pasta">
 
-    <p>
-        <strong>Ingredients:</strong> Lettuce, tomato, cucumber, carrot, olive oil, lemon juice.<br />
-        A healthy and refreshing dish.
-    </p>
+                <div class="recipe-image">
+                    <img
+                        src="image/Annotation 2026-02-18 121134.png"
+                        alt="Creamy Pasta">
+                    <span class="category">Italian</span>
+                </div>
 
-    <p><strong>Procedure:</strong></p>
-    <ol>
-        <li>Wash and chop all vegetables.</li>
-        <li>Place them in a bowl.</li>
-        <li>Add olive oil and lemon juice.</li>
-        <li>Toss well.</li>
-        <li>Serve fresh.</li>
-    </ol>
-</div>
+                <div class="recipe-content">
+                    <h2>Creamy Pasta</h2>
 
-<div>
-    <h2 id="biryani">Vegetable Biryani</h2>
-    <img style="border-radius: 25px; border: 2px solid white ;text-align: center;" src="image\Annotation 2026-02-18 123213.png" alt="Vegetable Biryani" width="300" />
+                    <p class="description">
+                        A rich and creamy pasta perfect for dinner.
+                    </p>
 
-    <p>
-        <strong>Ingredients:</strong> Rice, mixed vegetables, spices, onion, yogurt.<br />
-        <strong>Note:</strong> <em>Use basmati rice for best results.</em>
-    </p>
+                    <div class="ingredients">
+                        <h3>🛒 Ingredients</h3>
+                        <p>
+                            Pasta, cream, garlic, butter, cheese,
+                            salt and pepper.
+                        </p>
+                    </div>
 
-    <p><strong>Procedure:</strong></p>
-    <ol>
-        <li>Cook rice until 70% done.</li>
-        <li>Prepare spiced vegetable mixture.</li>
-        <li>Layer rice and vegetables.</li>
-        <li>Cook on low heat (dum) for 15 minutes.</li>
-        <li>Serve hot.</li>
-    </ol>
-</div>
+                    <h3 class="procedure-title">👨‍🍳 How to Make</h3>
 
-<div>
-    <h2 id="sandwich">Grilled Sandwich</h2>
-    <img style="border-radius: 25px; border: 2px solid white ;text-align: center;" src="image\Annotation 2026-02-18 123344.png" alt="Grilled Sandwich" width="300" />
+                    <ol>
+                        <li>Boil pasta in salted water until tender.</li>
+                        <li>Heat butter and sauté garlic.</li>
+                        <li>Add cream and cheese, then stir well.</li>
+                        <li>Mix in pasta and cook for 2 minutes.</li>
+                        <li>Serve hot.</li>
+                    </ol>
 
-    <p>
-        <strong>Ingredients:</strong> Bread slices, butter, cheese, vegetables, chutney.<br />
-        Quick and tasty snack.
-    </p>
-
-    <p><strong>Procedure:</strong></p>
-    <ol>
-        <li>Spread butter and chutney on bread.</li>
-        <li>Add vegetables and cheese.</li>
-        <li>Cover with another slice.</li>
-        <li>Grill until golden brown.</li>
-        <li>Cut and serve hot.</li>
-    </ol>
-</div>
+                    <a href="#feedback" class="recipe-btn">
+                        I Tried This Recipe →
+                    </a>
+                </div>
+            </article>
 
 
-<div>
-        <form action=""/action.php>
-            <input type="text" placeholder="Name">
-            <br>
-            <br>
-            <h4>Which recipe did you try?</h4>
+            <!-- Pancakes -->
+            <article class="recipe-card" id="pancakes">
+
+                <div class="recipe-image">
+                    <img
+                        src="image/Annotation 2026-02-18 122337.png"
+                        alt="Fluffy Pancakes">
+                    <span class="category">Breakfast</span>
+                </div>
+
+                <div class="recipe-content">
+                    <h2>Fluffy Pancakes</h2>
+
+                    <p class="description">
+                        Soft, fluffy pancakes perfect for breakfast!
+                    </p>
+
+                    <div class="ingredients">
+                        <h3>🛒 Ingredients</h3>
+                        <p>
+                            Flour, milk, eggs, sugar, baking powder
+                            and butter.
+                        </p>
+                    </div>
+
+                    <h3 class="procedure-title">👨‍🍳 How to Make</h3>
+
+                    <ol>
+                        <li>Mix dry ingredients in a bowl.</li>
+                        <li>Add milk and eggs, then whisk smoothly.</li>
+                        <li>Heat a pan and add butter.</li>
+                        <li>Pour batter and cook both sides.</li>
+                        <li>Serve with syrup.</li>
+                    </ol>
+
+                    <a href="#feedback" class="recipe-btn">
+                        I Tried This Recipe →
+                    </a>
+                </div>
+            </article>
 
 
-            <label for="creamy pasta">
-                <input type="checkbox" value="creamy pasta" name="recipe" id="101">creamy pasta
-            </label>
-            <br>
-            <label for="Fluffy Pancakes">
-                <input type="checkbox" value="Fluffy Pancakes" name="recipe" id="101">Fluffy Pancakes
-            </label>
-            <br>
-            <label for="Fresh Garden Salad">
-                <input type="checkbox" value="Fresh Garden Salad" name="recipe" id="101">Fresh Garden Salad
-            </label>
-            <br>
-            <label for="Vegetable Biryani">
-                <input type="checkbox" value="Vegetable Biryani" name="recipe" id="101">Vegetable Biryani
-            </label>
-            <br>
-            <label for="Grilled Sandwich">
-                <input type="checkbox" value=Grilled Sandwich" name="recipe" id="101">Grilled Sandwich
-            </label>
-            <br><br>
-          
-            <br>
-            <h4>give your feedback</h4>
+            <!-- Salad -->
+            <article class="recipe-card" id="salad">
 
-            <textarea name="feedback" id="101" placeholder="please give your valuable feedback here" rows="5">feedback</textarea>
-            <br>
+                <div class="recipe-image">
+                    <img
+                        src="image/Annotation 2026-02-18 122737.png"
+                        alt="Fresh Garden Salad">
+                    <span class="category">Healthy</span>
+                </div>
 
-            <input type="submit" value="submit">
+                <div class="recipe-content">
+                    <h2>Fresh Garden Salad</h2>
 
-        </form>
-</div>
+                    <p class="description">
+                        A healthy, colorful and refreshing dish.
+                    </p>
+
+                    <div class="ingredients">
+                        <h3>🛒 Ingredients</h3>
+                        <p>
+                            Lettuce, tomato, cucumber, carrot,
+                            olive oil and lemon juice.
+                        </p>
+                    </div>
+
+                    <h3 class="procedure-title">👨‍🍳 How to Make</h3>
+
+                    <ol>
+                        <li>Wash and chop all vegetables.</li>
+                        <li>Place them in a bowl.</li>
+                        <li>Add olive oil and lemon juice.</li>
+                        <li>Toss everything well.</li>
+                        <li>Serve fresh.</li>
+                    </ol>
+
+                    <a href="#feedback" class="recipe-btn">
+                        I Tried This Recipe →
+                    </a>
+                </div>
+            </article>
+
+
+            <!-- Biryani -->
+            <article class="recipe-card" id="biryani">
+
+                <div class="recipe-image">
+                    <img
+                        src="image/Annotation 2026-02-18 123213.png"
+                        alt="Vegetable Biryani">
+                    <span class="category">Indian</span>
+                </div>
+
+                <div class="recipe-content">
+                    <h2>Vegetable Biryani</h2>
+
+                    <p class="description">
+                        Aromatic rice cooked with vegetables and spices.
+                    </p>
+
+                    <div class="ingredients">
+                        <h3>🛒 Ingredients</h3>
+                        <p>
+                            Rice, mixed vegetables, spices,
+                            onion and yogurt.
+                        </p>
+                        <p class="note">
+                            💡 Tip: Use basmati rice for the best results.
+                        </p>
+                    </div>
+
+                    <h3 class="procedure-title">👨‍🍳 How to Make</h3>
+
+                    <ol>
+                        <li>Cook rice until it is 70% done.</li>
+                        <li>Prepare the spiced vegetable mixture.</li>
+                        <li>Layer the rice and vegetables.</li>
+                        <li>Cook on low heat (dum) for 15 minutes.</li>
+                        <li>Serve hot.</li>
+                    </ol>
+
+                    <a href="#feedback" class="recipe-btn">
+                        I Tried This Recipe →
+                    </a>
+                </div>
+            </article>
+
+
+            <!-- Sandwich -->
+            <article class="recipe-card" id="sandwich">
+
+                <div class="recipe-image">
+                    <img
+                        src="image/Annotation 2026-02-18 123344.png"
+                        alt="Grilled Sandwich">
+                    <span class="category">Quick Snack</span>
+                </div>
+
+                <div class="recipe-content">
+                    <h2>Grilled Sandwich</h2>
+
+                    <p class="description">
+                        A crispy, cheesy snack ready in minutes.
+                    </p>
+
+                    <div class="ingredients">
+                        <h3>🛒 Ingredients</h3>
+                        <p>
+                            Bread slices, butter, cheese,
+                            vegetables and chutney.
+                        </p>
+                    </div>
+
+                    <h3 class="procedure-title">👨‍🍳 How to Make</h3>
+
+                    <ol>
+                        <li>Spread butter and chutney on bread.</li>
+                        <li>Add vegetables and cheese.</li>
+                        <li>Cover with another bread slice.</li>
+                        <li>Grill until golden brown.</li>
+                        <li>Cut and serve hot.</li>
+                    </ol>
+
+                    <a href="#feedback" class="recipe-btn">
+                        I Tried This Recipe →
+                    </a>
+                </div>
+            </article>
+
+        </section>
+
+
+        <!-- Feedback Form -->
+        <section id="feedback" class="feedback-section">
+
+            <div class="feedback-card">
+
+                <div class="section-heading">
+                    <span class="tag">YOUR OPINION MATTERS</span>
+                    <h2>Share Your Experience 💬</h2>
+                    <p>
+                        Tried one of our recipes? Tell us what you think!
+                    </p>
+                </div>
+
+                <form action="#" method="get">
+
+                    <label for="name">Your Name</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your name"
+                        required>
+
+                    <fieldset>
+                        <legend>Which recipes did you try?</legend>
+
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="recipe"
+                                   value="Creamy Pasta">
+                            Creamy Pasta
+                        </label>
+
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="recipe"
+                                   value="Fluffy Pancakes">
+                            Fluffy Pancakes
+                        </label>
+
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="recipe"
+                                   value="Fresh Garden Salad">
+                            Fresh Garden Salad
+                        </label>
+
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="recipe"
+                                   value="Vegetable Biryani">
+                            Vegetable Biryani
+                        </label>
+
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="recipe"
+                                   value="Grilled Sandwich">
+                            Grilled Sandwich
+                        </label>
+                    </fieldset>
+
+                    <label for="feedback-message">
+                        Your Feedback
+                    </label>
+
+                    <textarea
+                        id="feedback-message"
+                        name="feedback"
+                        rows="5"
+                        placeholder="Write your valuable feedback here..."
+                        required></textarea>
+
+                    <button type="submit" class="submit-btn">
+                        Submit Feedback ✨
+                    </button>
+
+                </form>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <h2>RecipeBook</h2>
+        <p>Good food. Great mood. Happy cooking!</p>
+        <p class="copyright">
+            © 2026 Delicious Recipe Collection. Made with
+        </p>
+    </footer>
 
 </body>
 </html>
