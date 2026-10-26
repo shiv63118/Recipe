@@ -342,9 +342,9 @@ textarea {
     align-items: center;
     gap: 8px;
     padding: 8px 12px;
-    border-radius: 8px;
-    background: #f3a702;
-    color: #3a036e;
+    border-radius: 15px;
+    background: #190027;
+    color: #f39f02;
     font-size: 14px;
     cursor: pointer;
 }
@@ -361,7 +361,7 @@ textarea {
     border: none;
     border-radius: 10px;
     color: rgb(11, 1, 49);
-    background: linear-gradient(90deg, #f79504, #c3ee03);
+    background: linear-gradient(90deg, #eb6106, #32ee03);
     font-weight: 750;
     cursor: pointer;
     transition: transform 0.2s, box-shadow 0.2s;
